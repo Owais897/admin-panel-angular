@@ -6,19 +6,21 @@ import { AppComponent } from './app.component';
 import { NewComponentComponent } from './components/new-component/new-component.component';
 import { TestComponentComponent } from './components/test-component/test-component.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NewComponentComponent,
-    TestComponentComponent
-  ],
+  declarations: [AppComponent, NewComponentComponent, TestComponentComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatCheckboxModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+  isChecked = true;
+}
